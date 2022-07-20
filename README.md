@@ -82,7 +82,7 @@ pip install tensorboardX
 > ```bash
 > python test.py --backbone {vgg16, resnet50} 
 >                --fold {0, 1, 2, 3} 
->                --benchmark Deepglobe
+>                --benchmark deepglobe
 >                --nshot {1, 5} 
 >                --load "path_to_trained_model/best_model.pt"
 > ```
@@ -92,7 +92,7 @@ pip install tensorboardX
 > ```bash
 > python test.py --backbone {vgg16, resnet50} 
 >                --fold {0, 1, 2, 3} 
->                --benchmark ISIC 
+>                --benchmark isic 
 >                --nshot {1, 5} 
 >                --load "path_to_trained_model/best_model.pt"
 > ```
@@ -100,7 +100,7 @@ pip install tensorboardX
 > ### 3. Chest X-ray
 > ```bash
 > python test.py --backbone {vgg16, resnet50} 
->                --benchmark Lung 
+>                --benchmark lung 
 >                --nshot {1, 5} 
 >                --load "path_to_trained_model/best_model.pt"
 > ```
