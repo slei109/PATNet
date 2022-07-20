@@ -4,6 +4,11 @@
 
 The Cross-Domain Few-Shot Semantic Segmentation includes data from the Deepglobe [1], ISIC2018 [2-3], Chest X-ray [4-5], and FSS-1000 [6] datasets, which covers satellite images, dermoscopic images of skin lesions, X-ray images, and daily objects respectively. The selected datasets reflect real-world use cases for few-shot learning since collecting enough examples from above domains is often difficult, expensive, or in some cases not possible. 
 
+<p align="middle">
+    <img src="data/assets/prob.png">
+</p>
+
+
 ## Datasets
 The following datasets are used for evaluation in CD-FSS:
 
