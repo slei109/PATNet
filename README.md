@@ -111,20 +111,6 @@ pip install tensorboardX
 ## Acknowledgement
 The implementation is based on [HSNet](https://github.com/juhongm999/hsnet). <br>
 
-
-[//]: # (### BibTeX)
-
-[//]: # (Please cite the following paper in use of this evaluation framework:)
-
-[//]: # (```
-[//]: # (@inproceedings{guo2020broader,
-[//]: # (  title={A broader study of cross-domain few-shot learning},
-[//]: # (  author={Guo, Yunhui and Codella, Noel C and Karlinsky, Leonid and Codella, James V and Smith, John R and Saenko, Kate and Rosing, Tajana and Feris, Rogerio},
-[//]: # (  year={2020},
-[//]: # (  organization={ECCV}
-[//]: # (})
-[//]: # (```)
-
 ## References
 
 [1] Demir, I., Koperski, K., Lindenbaum, D., Pang, G., Huang, J., Basu, S., Hughes,
