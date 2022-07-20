@@ -137,7 +137,6 @@ class PATNetwork(nn.Module):
         return dist # dist:[1,53,53]
 
     def finetune_reference(self, batch, query_mask, nshot):
-
         # Perform multiple prediction given (nshot) number of different support sets
         kl_agg = 0
         cos_agg = 0
@@ -151,25 +150,13 @@ class PATNetwork(nn.Module):
 
             kl = 0
             cos = 0
-            # if idx <= 3:
-            #     R = self.reference_layer1.weight.expand(C.shape)
-            # elif idx <= 9:
-            #     R = self.reference_layer2.weight.expand(C.shape)
-            trans_query_feats, trans_support_feats = self.Transformation_Feature(query_feats, support_feats_wo_mask,
-                                                                                 prototypes_sf,
-                                                                                 prototypes_sb)
+
             for idx, feature in enumerate(prototypes_qf):
-                if idx >3 and idx <= 9:
+                if idx <= 3:
                     kl += F.kl_div(feature.softmax(dim=-1).log(), prototypes_sf[idx].softmax(dim=-1), reduction='sum')
-                    # dis_sim = [self.calDist((trans_support_feats[idx]), prototype.unsqueeze(0)) for prototype in
-                    #            self.reference_layer1.weight]
-                    # supp_pred = torch.stack(dis_sim, dim=0)
-                    # gt_sup = F.interpolate(batch['support_masks'][:, s_idx].unsqueeze(1).float(), supp_pred.size()[2:],
-                    #               mode='bilinear', align_corners=True)
-                    # cos += self.compute_objective(supp_pred, gt_sup)
             kl_agg += kl
             cos_agg += cos / 4
-            # if nshot == 1: return 0.001*cos_agg + kl_agg
+
             if nshot == 1: return kl_agg
 
         return kl_agg/nshot

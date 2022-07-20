@@ -7,7 +7,7 @@ The Cross-Domain Few-Shot Semantic Segmentation includes data from the Deepglobe
 <p align="middle">
     <img src="data/assets/prob.png">
 </p>
-
+We study the CD-FSS problem, where the source and target domains have completely disjoint label space and cannot access target domain data during the training stage. 
 
 ## Datasets
 The following datasets are used for evaluation in CD-FSS:
