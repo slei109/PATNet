@@ -1,5 +1,7 @@
 # Cross-Domain Few-Shot Semantic Segmentation (CD-FSS)
 
+This is the implementation of the paper "Cross-Domain Few-Shot Semantic Segmentation". For more information, check out the [\[paper\]](https://slei109.github.io/papers/eccv-cdfss.pdf).
+
 ## Introduction
 
 The Cross-Domain Few-Shot Semantic Segmentation includes data from the Deepglobe [1], ISIC2018 [2-3], Chest X-ray [4-5], and FSS-1000 [6] datasets, which covers satellite images, dermoscopic images of skin lesions, X-ray images, and daily objects respectively. The selected datasets reflect real-world use cases for few-shot learning since collecting enough examples from above domains is often difficult, expensive, or in some cases not possible. 
@@ -8,6 +10,7 @@ The Cross-Domain Few-Shot Semantic Segmentation includes data from the Deepglobe
     <img src="data/assets/prob.png">
 </p>
 We study the CD-FSS problem, where the source and target domains have completely disjoint label space and cannot access target domain data during the training stage. 
+
 
 ## Datasets
 The following datasets are used for evaluation in CD-FSS:
