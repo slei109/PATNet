@@ -1,6 +1,6 @@
 # Cross-Domain Few-Shot Semantic Segmentation (CD-FSS)
 
-This is the implementation of the paper "Cross-Domain Few-Shot Semantic Segmentation". For more information, check out the [\[paper\]](https://slei109.github.io/papers/eccv-cdfss.pdf).
+This is the implementation of the paper "Cross-Domain Few-Shot Semantic Segmentation". For more information, check out the [\[paper\]](https://slei109.github.io/papers/eccv-cdfss.pdf) and [\[supp\]](https://slei109.github.io/papers/eccv_cdfss_supp.pdf).
 
 ## Introduction
 
