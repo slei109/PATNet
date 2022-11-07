@@ -116,6 +116,19 @@ pip install tensorboardX
 >                --load "path_to_trained_model/best_model.pt"
 > ```
 
+## Citation
+If you use this code for your research, please consider citing:
+```bash
+@inproceedings{lei2022cross,
+   title={Cross-Domain Few-Shot Semantic Segmentation},
+   author={Lei, Shuo and Zhang, Xuchao and He, Jianfeng and Chen, Fanglan and Du, Bowen and Lu, Chang-Tien},
+   booktitle={European Conference on Computer Vision},
+   pages={73--90},
+   year={2022},
+   organization={Springer}
+ }
+ ```
+
 ## Acknowledgement
 The implementation is based on [HSNet](https://github.com/juhongm999/hsnet). <br>
 
