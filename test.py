@@ -44,7 +44,7 @@ if __name__ == '__main__':
     parser.add_argument('--logpath', type=str, default='./')
     parser.add_argument('--bsz', type=int, default=30)
     parser.add_argument('--nworker', type=int, default=0)
-    parser.add_argument('--load', type=str, default='')
+    parser.add_argument('--load', type=str, default='path_to_your_trained_model')
     parser.add_argument('--fold', type=int, default=0)
     parser.add_argument('--nshot', type=int, default=1)
     parser.add_argument('--backbone', type=str, default='resnet50', choices=['vgg16', 'resnet50'])
