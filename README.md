@@ -84,7 +84,6 @@ pip install tensorboardX
 > ### 1. Deepglobe
 > ```bash
 > python test.py --backbone {vgg16, resnet50} 
->                --fold {0, 1, 2, 3} 
 >                --benchmark deepglobe
 >                --nshot {1, 5} 
 >                --load "path_to_trained_model/best_model.pt"
@@ -94,7 +93,6 @@ pip install tensorboardX
 > ### 2. ISIC
 > ```bash
 > python test.py --backbone {vgg16, resnet50} 
->                --fold {0, 1, 2, 3} 
 >                --benchmark isic 
 >                --nshot {1, 5} 
 >                --load "path_to_trained_model/best_model.pt"
