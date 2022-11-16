@@ -1,4 +1,4 @@
-r""" Hypercorrelation Squeeze training (validation) code """
+r""" PATNet training (validation) code """
 import sys
 sys.path.insert(0, "../")
 
@@ -57,7 +57,7 @@ if __name__ == '__main__':
     parser = argparse.ArgumentParser(description='Cross-Domain Few-Shot Semantic Segmentation Pytorch Implementation')
     parser.add_argument('--datapath', type=str, default='../VOCdevkit')
     parser.add_argument('--benchmark', type=str, default='pascal')
-    parser.add_argument('--logpath', type=str, default='test')
+    parser.add_argument('--logpath', type=str, default='test_case')
     parser.add_argument('--bsz', type=int, default=2)
     parser.add_argument('--lr', type=float, default=1e-3)
     parser.add_argument('--niter', type=int, default=2000)
@@ -68,7 +68,7 @@ if __name__ == '__main__':
     Logger.initialize(args, training=True)
 
     # Model initialization
-    model = PATNetwork(args.backbone, False)
+    model = PATNetwork(args.backbone)
     Logger.log_params(model)
 
     # Device setup
@@ -82,10 +82,10 @@ if __name__ == '__main__':
     Evaluator.initialize()
 
     # Dataset initialization
-    FSSDataset.initialize(img_size=400, datapath=args.datapath, use_original_imgsize=False)
+    FSSDataset.initialize(img_size=400, datapath=args.datapath)
     dataloader_trn = FSSDataset.build_dataloader(args.benchmark, args.bsz, args.nworker, args.fold, 'trn')
-    FSSDataset.initialize(img_size=400, datapath='./', use_original_imgsize=False)
-    dataloader_val = FSSDataset.build_dataloader(args.benchmark, args.bsz, args.nworker, args.fold, 'val')
+    FSSDataset.initialize(img_size=400, datapath='path_to_your_dataset')
+    dataloader_val = FSSDataset.build_dataloader('fss', args.bsz, args.nworker, '0', 'val')
 
     # Train HSNet
     best_val_miou = float('-inf')
