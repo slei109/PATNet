@@ -97,4 +97,3 @@ from PIL import Image
 #     file.write(str(filename[n]))
 #     file.write('\n')
 # file.close()
-
