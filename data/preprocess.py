@@ -58,3 +58,43 @@ from PIL import Image
 #             path = YOUR_PATH_TO_FILTER_DATA + f.strip()
 #             img.save(path)
 
+############################################################################
+# step 3: generate binary mask for each class
+############################################################################
+
+# labelset = [[0, 255, 255], [255, 255, 0], [255, 0, 255], [0, 255, 0], [255, 0, 0], [255, 255, 255]]
+
+# def GetBinaryMap(img, label):
+#     mask = np.ones((img.shape))
+#     isnull = 1
+#     for j in range(len(img)):
+#         for k in range(len(img)):
+#             if (img[j][k].tolist() == labelset[label]):
+#                 mask[j][k] = [255, 255, 255]
+#                 isnull = 0
+#             else:
+#                 mask[j][k] = [0, 0, 0]
+#     return isnull, mask
+#
+#list all files under the folder
+# oridir = YOUR_PATH_TO_FILTERED_LABEL_DATA
+# masklist = os.listdir(oridir)
+# desdir = YOUR_PATH_TO_BINARY_MASK_FOR_EACH_CLASS
+
+# for label in range(0, 6):
+# filename = []# to save the filename which belongs to this class
+# desdir_label = os.path.join(desdir, str(label+1))
+# for i in range(len(masklist)):
+#     if (masklist[i].endswith('.png')):
+#         imgfile = os.path.join(oridir, masklist[i])
+#         img = cv2.imread(imgfile, 1)
+#         isnull, binary_mask = GetBinaryMap(img, label) ## isnull: 1 denotes whole mask is black
+#         if (isnull == 0):
+#             filename.append(os.path.splitext(masklist[i])[0])
+#             cv2.imwrite(desdir_label + '/' + masklist[i], binary_mask)
+# file = open(desdir + str(label+1) + '.txt', 'w')
+# for n in range(len(filename)):
+#     file.write(str(filename[n]))
+#     file.write('\n')
+# file.close()
+
