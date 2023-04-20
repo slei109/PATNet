@@ -83,13 +83,13 @@ class PATNetwork(nn.Module):
             mask_features.append(features[idx] * mask)
             features[idx] = features[idx] * mask
             ### prototype
-            proto_f = features[idx].mean((2, 3))
-            label_mean = mask.mean((2, 3))
-            proto_f = proto_f / (label_mean + eps)
+            proto_f = features[idx].sum((2, 3))
+            label_sum = mask.sum((2, 3))
+            proto_f = proto_f / (label_sum + eps)
             prototypes_f.append(proto_f)
-            proto_b = bg_features[idx].mean((2, 3))
-            label_mean = bg_mask.mean((2, 3))
-            proto_b = proto_b / (label_mean + eps)
+            proto_b = bg_features[idx].sum((2, 3))
+            label_sum = bg_mask.sum((2, 3))
+            proto_b = proto_b / (label_sum + eps)
             prototypes_b.append(proto_b)
         return mask_features, prototypes_f, prototypes_b
 
