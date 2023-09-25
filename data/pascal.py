@@ -17,8 +17,8 @@ class DatasetPASCAL(Dataset):
         self.benchmark = 'pascal'
         self.shot = shot
 
-        self.img_path = os.path.join('../VOCdevkit/VOC2012/JPEGImages/')
-        self.ann_path = os.path.join('../VOCdevkit/VOC2012/SegmentationClassAug/')
+        self.img_path = os.path.join(datapath, 'VOC2012/JPEGImages/')
+        self.ann_path = os.path.join(datapath, 'VOC2012/SegmentationClassAug/')
         self.transform = transform
 
         self.class_ids = self.build_class_ids()
