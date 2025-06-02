@@ -33,7 +33,7 @@ The following datasets are used for evaluation in CD-FSS:
 
     Direct: https://www.kaggle.com/datasets/balraj98/deepglobe-land-cover-classification-dataset
     
-    Preprocessed Data: https://drive.google.com/file/d/10qsi1NRyFKFyoIq1gAKDab6xkbE0Vc74/view?usp=sharing
+    Preprocessed Data: https://drive.google.com/file/d/12Dljy04maKIim3mZsR50CEOC3_ROZLCg/view?usp=drive_link
 
 * **ISIC2018**:
 
